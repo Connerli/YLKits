@@ -1,16 +1,16 @@
 //
-//  UIView+YLKit.h
+//  UIView+YLLayout.h
 //  YLProject
 //
-//  Created by Conner on 2019/4/22.
-//  Copyright © 2019年 Conner. All rights reserved.
+//  Created by Conner on 2019/5/31.
+//  Copyright © 2019 Conner. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (YLKit)
+@interface UIView (YLLayout)
 /**
  * Shortcut for frame.origin.x.
  *
@@ -101,12 +101,6 @@ NS_ASSUME_NONNULL_BEGIN
  * Shortcut for frame.size
  */
 @property (nonatomic) CGSize size;
-//控制器
-- (UIViewController*)viewController;
-//重用标识符号
-+ (NSString *)viewClassName;
-//nib 文件
-+ (UINib *)viewWithNib;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,14 +1,14 @@
 //
-//  UIView+YLKit.m
+//  UIView+YLLayout.m
 //  YLProject
 //
-//  Created by Conner on 2019/4/22.
-//  Copyright © 2019年 Conner. All rights reserved.
+//  Created by Conner on 2019/5/31.
+//  Copyright © 2019 Conner. All rights reserved.
 //
 
-#import "UIView+YLKit.h"
+#import "UIView+YLLayout.h"
 
-@implementation UIView (YLKit)
+@implementation UIView (YLLayout)
 - (CGFloat)left {
     return self.frame.origin.x;
 }
@@ -151,24 +151,6 @@
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
-}
-
-- (UIViewController*)viewController {
-    for (UIView* next = [self superview]; next; next = next.superview) {
-        UIResponder* nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController*)nextResponder;
-        }
-    }
-    return nil;
-}
-
-+ (NSString *)viewClassName {
-    return NSStringFromClass([self class]);
-}
-
-+ (UINib *)viewWithNib {
-    return [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
 }
 
 @end
