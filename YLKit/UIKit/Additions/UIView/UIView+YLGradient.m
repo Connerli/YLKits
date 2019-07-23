@@ -7,6 +7,7 @@
 //
 
 #import "UIView+YLGradient.h"
+#import <objc/runtime.h>
 
 @implementation UIView (YLGradient)
 + (Class)layerClass {
