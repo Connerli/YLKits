@@ -10,7 +10,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CALayer (YLKit)
+/**
+ 设置border颜色 主要用于xib方便设置色值
+ @param color 色值
+ */
 - (void)setBorderUIColor:(UIColor *)color;
+
+/**
+ border的UI 色值
+ @return 色值
+ */
 - (UIColor *)borderUIColor;
 @end
 

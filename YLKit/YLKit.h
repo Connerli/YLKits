@@ -12,19 +12,11 @@
 /**
  *  UIKit Categories
  */
-#import "UIView+YLKit.h"
-#import "UIView+YLLayout.h"
-#import "UIColor+YLKit.h"
-#import "CALayer+YLKit.h"
-#import "UIColor+YLKit.h"
-#import "UIFont+YLKit.h"
-#import "UITableView+YLKit.h"
-
+#import "YLUIKitHeader.h"
 
 /**
  *  Foundation Categories
  */
-#import "NSString+YLKit.h"
-#import "NSArray+YLKit.h"
+#import "YLFoundationHeader.h"
 
 #endif /* YLKit_h */

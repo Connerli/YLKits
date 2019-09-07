@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (YLKit)
 //控制器
 - (UIViewController*)viewController;
-//重用标识符号
-+ (NSString *)viewClassName;
 //nib 文件
 + (UINib *)viewWithNib;
 @end
