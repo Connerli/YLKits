@@ -7,7 +7,7 @@
 //
 
 #import "NSFileManager+YLKit.h"
-#import "YLKitMacros.h"
+#define YLAPP_NAME [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
 @implementation NSFileManager (YLKit)
 
@@ -275,11 +275,11 @@
 }
 
 + (id _Nullable)getAppSettingsForObjectWithKey:(NSString * _Nonnull)objKey {
-    return [self getSettings:APP_NAME objectForKey:objKey];
+    return [self getSettings:YLAPP_NAME objectForKey:objKey];
 }
 
 + (BOOL)setAppSettingsForObject:(id _Nonnull)value forKey:(NSString * _Nonnull)objKey {
-    return [self setSettings:APP_NAME object:value forKey:objKey];
+    return [self setSettings:YLAPP_NAME object:value forKey:objKey];
 }
 
 @end

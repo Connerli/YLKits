@@ -42,7 +42,6 @@
 		13E5FED9228A54BA0060E5A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13FD5971231E74E10030B7D0 /* YLFoundationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLFoundationHeader.h; sourceTree = "<group>"; };
 		13FD5972231E74E10030B7D0 /* YLUIKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUIKitHeader.h; sourceTree = "<group>"; };
-		13FD5973231E74E10030B7D0 /* YLKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLKitMacros.h; sourceTree = "<group>"; };
 		13FD5976231E74E10030B7D0 /* UIImage+YLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLKit.m"; sourceTree = "<group>"; };
 		13FD5977231E74E10030B7D0 /* UITableView+YLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YLKit.h"; sourceTree = "<group>"; };
 		13FD5978231E74E20030B7D0 /* UIFont+YLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YLKit.m"; sourceTree = "<group>"; };
@@ -122,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				13FD5995231E74E20030B7D0 /* YLKit.h */,
-				13FD5973231E74E10030B7D0 /* YLKitMacros.h */,
 				13FD5972231E74E10030B7D0 /* YLUIKitHeader.h */,
 				13FD5971231E74E10030B7D0 /* YLFoundationHeader.h */,
 				13FD5989231E74E20030B7D0 /* Foundation */,

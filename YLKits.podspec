@@ -89,11 +89,18 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "YLKit", "YLKit/Foundation/Additions/*.{h,m}","YLKit/UIKit/Additions/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  # s.source_files  = "YLKit", "YLKit/Foundation/Additions/*.{h,m}","YLKit/UIKit/Additions/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
   s.public_header_files = "YLKit/*.h"
 
+  s.subspec 'Foundation' do |ss|
+    ss.source_files = 'YLKit/Foundation/**/*.{h,m}'
+  end 
+
+  s.subspec 'UIKit' do |ss|
+    ss.source_files = 'YLKit/UIKit/**/*.{h,m}'
+  end 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
