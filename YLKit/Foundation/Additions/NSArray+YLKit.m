@@ -18,6 +18,10 @@
     }
 }
 
+- (NSArray *)reversedArray {
+    return [NSArray reversedArray:self];
+}
+
 + (NSArray * _Nonnull)reversedArray:(NSArray * _Nonnull)array {
     NSMutableArray *arrayTemp = [NSMutableArray arrayWithCapacity:[array count]];
     NSEnumerator *enumerator = [array reverseObjectEnumerator];
