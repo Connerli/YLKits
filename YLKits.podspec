@@ -91,15 +91,15 @@ Pod::Spec.new do |s|
 
   # s.source_files  = "YLKit", "YLKit/Foundation/Additions/*.{h,m}","YLKit/UIKit/Additions/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
+  s.source_files = "YLKit/YLKit.h","YLKit/YLUIKitHeader.h","YLKit/YLFoundationHeader.h"
+  # s.public_header_files = "YLKit/YLKit.h"
 
-  s.public_header_files = "YLKit/*.h"
-
-  s.subspec 'Foundation' do |ss|
-    ss.source_files = 'YLKit/Foundation/**/*.{h,m}'
+  s.subspec "Foundation" do |ss|
+    ss.source_files = "YLKit/Foundation/**/*.{h,m}"
   end 
 
-  s.subspec 'UIKit' do |ss|
-    ss.source_files = 'YLKit/UIKit/**/*.{h,m}'
+  s.subspec "UIKit" do |ss|
+    ss.source_files = "YLKit/UIKit/**/*.{h,m}"
   end 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
