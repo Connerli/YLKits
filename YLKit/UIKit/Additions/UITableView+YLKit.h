@@ -40,6 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param lineColor      线的颜色
  */
 - (void)addShortLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(UIColor *)lineColor;
+
+/// 分区添加圆角
+/// @param cell 要添加的cell
+/// @param indexPath 坐标
+/// @param cornerRadius 圆角
+- (void)addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius;
 @end
 
 NS_ASSUME_NONNULL_END

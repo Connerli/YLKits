@@ -10,12 +10,12 @@
 #define YLKit_h
 
 /**
- *  UIKit Categories
+ *  UIKit
  */
 #import "YLUIKitHeader.h"
 
 /**
- *  Foundation Categories
+ *  Foundation
  */
 #import "YLFoundationHeader.h"
 
