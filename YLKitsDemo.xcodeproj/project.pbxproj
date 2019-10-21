@@ -14,6 +14,7 @@
 		13E5FED4228A54BA0060E5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E5FED3228A54BA0060E5A8 /* Assets.xcassets */; };
 		13E5FED7228A54BA0060E5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E5FED5228A54BA0060E5A8 /* LaunchScreen.storyboard */; };
 		13E5FEDA228A54BA0060E5A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FED9228A54BA0060E5A8 /* main.m */; };
+		13FB8058235D987E00026AD2 /* YLRouterNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FB8057235D987E00026AD2 /* YLRouterNavigation.m */; };
 		13FD5996231E74E20030B7D0 /* UIImage+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FD5976231E74E10030B7D0 /* UIImage+YLKit.m */; };
 		13FD5997231E74E20030B7D0 /* UIFont+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FD5978231E74E20030B7D0 /* UIFont+YLKit.m */; };
 		13FD5998231E74E20030B7D0 /* UIView+YLLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FD597D231E74E20030B7D0 /* UIView+YLLayout.m */; };
@@ -43,6 +44,8 @@
 		13E5FED6228A54BA0060E5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13E5FED8228A54BA0060E5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E5FED9228A54BA0060E5A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13FB8056235D987E00026AD2 /* YLRouterNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLRouterNavigation.h; sourceTree = "<group>"; };
+		13FB8057235D987E00026AD2 /* YLRouterNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLRouterNavigation.m; sourceTree = "<group>"; };
 		13FD5971231E74E10030B7D0 /* YLFoundationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLFoundationHeader.h; sourceTree = "<group>"; };
 		13FD5972231E74E10030B7D0 /* YLUIKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUIKitHeader.h; sourceTree = "<group>"; };
 		13FD5976231E74E10030B7D0 /* UIImage+YLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLKit.m"; sourceTree = "<group>"; };
@@ -120,6 +123,15 @@
 			path = YLKitsDemo;
 			sourceTree = "<group>";
 		};
+		13FB8055235D94C300026AD2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				13FB8056235D987E00026AD2 /* YLRouterNavigation.h */,
+				13FB8057235D987E00026AD2 /* YLRouterNavigation.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		13FD5970231E74E10030B7D0 /* YLKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 		13FD5989231E74E20030B7D0 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				13FB8055235D94C300026AD2 /* Tools */,
 				13FD598A231E74E20030B7D0 /* Additions */,
 			);
 			path = Foundation;
@@ -281,6 +294,7 @@
 				13FD599A231E74E20030B7D0 /* UIView+YLGradient.m in Sources */,
 				13FD599C231E74E20030B7D0 /* UITableView+YLKit.m in Sources */,
 				13FD5999231E74E20030B7D0 /* UIView+YLKit.m in Sources */,
+				13FB8058235D987E00026AD2 /* YLRouterNavigation.m in Sources */,
 				13FD599D231E74E20030B7D0 /* UIColor+YLKit.m in Sources */,
 				13FD59A0231E74E20030B7D0 /* NSDictionary+YLKit.m in Sources */,
 				13FD5996231E74E20030B7D0 /* UIImage+YLKit.m in Sources */,

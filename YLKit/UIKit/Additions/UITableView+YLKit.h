@@ -45,7 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param cell 要添加的cell
 /// @param indexPath 坐标
 /// @param cornerRadius 圆角
-- (void)addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius;
+/// @param leftRightMargin 左右间隙
+/// @param topBottomMargin 上下间隙
+- (void)addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius leftRightMargin:(CGFloat)leftRightMargin topBottomMargin:(CGFloat)topBottomMargin;
 @end
 
 NS_ASSUME_NONNULL_END
