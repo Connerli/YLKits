@@ -9,11 +9,14 @@
 #ifndef YLFoundationHeader_h
 #define YLFoundationHeader_h
 
+//Additions
 #import "NSString+YLKit.h"
 #import "NSArray+YLKit.h"
 #import "NSObject+YLKit.h"
 #import "NSDictionary+YLKit.h"
 #import "NSFileManager+YLKit.h"
 
+//Tools
+#import "YLRouterNavigation.h"
 
 #endif /* YLFoundationHeader_h */
