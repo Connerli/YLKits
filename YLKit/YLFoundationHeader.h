@@ -17,6 +17,8 @@
 #import "NSFileManager+YLKit.h"
 
 //Tools
+#import "YLAppInfo.h"
+#import "YLEncryption.h"
 #import "YLRouterNavigation.h"
 
 #endif /* YLFoundationHeader_h */
