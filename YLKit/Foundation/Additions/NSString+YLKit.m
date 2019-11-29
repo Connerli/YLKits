@@ -186,10 +186,6 @@
     return [NSString stringWithFormat:@"%@/%@/%@ %@:%@", day, month, year, hours, minutes];
 }
 
-- (NSString * _Nonnull)urlEncode {
-    return [self URLEncode];
-}
-
 - (NSString * _Nonnull)URLEncode {
     return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 }

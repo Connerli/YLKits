@@ -180,13 +180,6 @@
  *
  *  @return Returns the encoded NSString
  */
-- (NSString * _Nonnull)urlEncode DEPRECATED_MSG_ATTRIBUTE("Use -URLEncode");
-
-/**
- *  Encode self to an encoded url string
- *
- *  @return Returns the encoded NSString
- */
 - (NSString * _Nonnull)URLEncode;
 
 /**

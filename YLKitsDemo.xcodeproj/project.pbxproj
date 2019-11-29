@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		130084F9238F77BD00BE809B /* YLEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 130084F8238F77BD00BE809B /* YLEncryption.m */; };
 		130084FC238F788C00BE809B /* NSData+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 130084FB238F788C00BE809B /* NSData+YLKit.m */; };
+		13332B9523910580007B4021 /* YLWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B9423910580007B4021 /* YLWeakProxy.m */; };
+		13332B982391078A007B4021 /* YLTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B972391078A007B4021 /* YLTimeUtils.m */; };
+		13332B9B23910B5A007B4021 /* NSTimer+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */; };
 		13470800236AEC7800BCB549 /* YLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 134707FF236AEC7800BCB549 /* YLAppInfo.m */; };
 		136E8EFF235ABB780033C558 /* UILabel+YLInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 136E8EFE235ABB780033C558 /* UILabel+YLInsets.m */; };
 		13E5FECC228A54B80060E5A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FECB228A54B80060E5A8 /* AppDelegate.m */; };
@@ -39,6 +42,12 @@
 		130084F8238F77BD00BE809B /* YLEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLEncryption.m; sourceTree = "<group>"; };
 		130084FA238F788C00BE809B /* NSData+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YLKit.h"; sourceTree = "<group>"; };
 		130084FB238F788C00BE809B /* NSData+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+YLKit.m"; sourceTree = "<group>"; };
+		13332B9323910580007B4021 /* YLWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLWeakProxy.h; sourceTree = "<group>"; };
+		13332B9423910580007B4021 /* YLWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLWeakProxy.m; sourceTree = "<group>"; };
+		13332B962391078A007B4021 /* YLTimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTimeUtils.h; sourceTree = "<group>"; };
+		13332B972391078A007B4021 /* YLTimeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLTimeUtils.m; sourceTree = "<group>"; };
+		13332B9923910B5A007B4021 /* NSTimer+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+YLKit.h"; sourceTree = "<group>"; };
+		13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+YLKit.m"; sourceTree = "<group>"; };
 		134707FE236AEC7800BCB549 /* YLAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLAppInfo.h; sourceTree = "<group>"; };
 		134707FF236AEC7800BCB549 /* YLAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAppInfo.m; sourceTree = "<group>"; };
 		136E8EFD235ABB780033C558 /* UILabel+YLInsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLInsets.h"; sourceTree = "<group>"; };
@@ -139,6 +148,10 @@
 				134707FF236AEC7800BCB549 /* YLAppInfo.m */,
 				130084F7238F77BD00BE809B /* YLEncryption.h */,
 				130084F8238F77BD00BE809B /* YLEncryption.m */,
+				13332B9323910580007B4021 /* YLWeakProxy.h */,
+				13332B9423910580007B4021 /* YLWeakProxy.m */,
+				13332B962391078A007B4021 /* YLTimeUtils.h */,
+				13332B972391078A007B4021 /* YLTimeUtils.m */,
 				13FB8056235D987E00026AD2 /* YLRouterNavigation.h */,
 				13FB8057235D987E00026AD2 /* YLRouterNavigation.m */,
 			);
@@ -224,6 +237,8 @@
 				13FD598C231E74E20030B7D0 /* NSString+YLKit.m */,
 				130084FA238F788C00BE809B /* NSData+YLKit.h */,
 				130084FB238F788C00BE809B /* NSData+YLKit.m */,
+				13332B9923910B5A007B4021 /* NSTimer+YLKit.h */,
+				13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -302,6 +317,7 @@
 				13470800236AEC7800BCB549 /* YLAppInfo.m in Sources */,
 				13E5FECF228A54B80060E5A8 /* ViewController.m in Sources */,
 				13FD5998231E74E20030B7D0 /* UIView+YLLayout.m in Sources */,
+				13332B9B23910B5A007B4021 /* NSTimer+YLKit.m in Sources */,
 				13FD59A2231E74E20030B7D0 /* NSArray+YLKit.m in Sources */,
 				13FD59A1231E74E20030B7D0 /* NSObject+YLKit.m in Sources */,
 				13E5FEDA228A54BA0060E5A8 /* main.m in Sources */,
@@ -310,7 +326,9 @@
 				13FD599B231E74E20030B7D0 /* UIButton+YLKit.m in Sources */,
 				13FD599A231E74E20030B7D0 /* UIView+YLGradient.m in Sources */,
 				130084FC238F788C00BE809B /* NSData+YLKit.m in Sources */,
+				13332B9523910580007B4021 /* YLWeakProxy.m in Sources */,
 				13FD599C231E74E20030B7D0 /* UITableView+YLKit.m in Sources */,
+				13332B982391078A007B4021 /* YLTimeUtils.m in Sources */,
 				13FD5999231E74E20030B7D0 /* UIView+YLKit.m in Sources */,
 				13FB8058235D987E00026AD2 /* YLRouterNavigation.m in Sources */,
 				13FD599D231E74E20030B7D0 /* UIColor+YLKit.m in Sources */,
