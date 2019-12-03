@@ -187,7 +187,7 @@
 }
 
 - (NSString * _Nonnull)URLEncode {
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 - (NSString * _Nonnull)removeExtraSpaces {
