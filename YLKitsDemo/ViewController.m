@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [YLAppInfo onFinishLaunchForFirstLaunch:nil];
-    [YLAppInfo onFinishLaunchForCurrentVersion:nil];
+   
 }
 
 

@@ -8,68 +8,68 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, SecondToDateFormat) {
+typedef NS_ENUM(NSInteger, YLSecondToDateFormat) {
     //例：2017年7月9日 17:30
     /**
      *  年：2017
      */
-    Second_To_Date_Format_yyyy = 0,
+    YLDateFormat_yyyy = 0,
     /**
      *  月：07
      */
-    Second_To_Date_Format_MM,
+    YLDateFormat_MM,
     /**
      *  日：09
      */
-    Second_To_Date_Format_dd,
+    YLDateFormat_dd,
     /**
      *  时：05
      */
-    Second_To_Date_Format_hh,
+    YLDateFormat_hh,
     /**
      *  时：17
      */
-    Second_To_Date_Format_HH,
+    YLDateFormat_HH,
     /**
      *  分：30
      */
-    Second_To_Date_Format_mm,
+    YLDateFormat_mm,
+    /**
+      *  星期日：sun
+      */
+    YLDateFormat_EEE,
     /**
      *  时分：17：30
      */
-    Second_To_Date_Format_HH_mm,
+    YLDateFormat_HH_mm,
     /**
      *   日期：07-09
      */
-    Second_To_Date_Format_MM_dd,
+    YLDateFormat_MM_dd,
     /**
      *  日期：15-07-09
      */
-    Second_To_Date_Format_yy_MM_dd,
+    YLDateFormat_yy_MM_dd,
     /**
      *  日期：2017-07-09
      */
-    Second_To_Date_Format_yyyy_MM_dd,
+    YLDateFormat_yyyy_MM_dd,
     /**
      *  日期：2017/07/09
      */
-    Second_To_Date_Format_yyyy_s_MM_s_dd,
+    YLDateFormat_yyyy_s_MM_s_dd,
     /**
      *  日期时间：2017-07-09 17:30
      */
-    Second_To_Date_Format_yyyy_MM_dd_HH_mm,
+    YLDateFormat_yyyy_MM_dd_HH_mm,
     /**
      *  日期时间：2017/07/09 17:30
      */
-    Second_To_Date_Format_yyyy_s_MM_s_dd_HH_mm,
-    /**
-     *  星期日：sun
-     */
-    Second_To_Date_Format_EEE,
+    YLDateFormat_yyyy_s_MM_s_dd_HH_mm,
     /**
      *  日期时间： 2017-01-01 11：11：11
      */
-    Second_To_Date_Format_yyyy_MM_dd_HH_mm_ss
+    YLDateFormat_yyyy_MM_dd_HH_mm_ss
 };
 
 @interface YLTimeUtils : NSObject
@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, SecondToDateFormat) {
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)getSystemTimeStringWithFormat:(SecondToDateFormat)format;
++ (NSString *)getSystemTimeStringWithFormat:(YLSecondToDateFormat)format;
 
 /**
  *  时间戳转日期
@@ -126,7 +126,7 @@ typedef NS_ENUM(NSInteger, SecondToDateFormat) {
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)timeStringWithInterval:(long long)timeInterval format:(SecondToDateFormat)format;
++ (NSString *)timeStringWithInterval:(long long)timeInterval format:(YLSecondToDateFormat)format;
 /**
  *  时间date转日期
  *
@@ -135,7 +135,7 @@ typedef NS_ENUM(NSInteger, SecondToDateFormat) {
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)timeStringWithDate:(NSDate *)date format:(SecondToDateFormat)format;
++ (NSString *)timeStringWithDate:(NSDate *)date format:(YLSecondToDateFormat)format;
 /**
  *  时间string转date
  *
@@ -144,7 +144,7 @@ typedef NS_ENUM(NSInteger, SecondToDateFormat) {
  *
  *  @return 指定格式时间字符串
  */
-+ (NSDate *)timeDateWithString:(NSString *)timeString format:(SecondToDateFormat)format;
++ (NSDate *)timeDateWithString:(NSString *)timeString format:(YLSecondToDateFormat)format;
 /**
  *  英式星期 转换为 中文式星期
  *
@@ -204,7 +204,7 @@ typedef NS_ENUM(NSInteger, SecondToDateFormat) {
  *  @param days  天数
  *  @param format 日期格式
  */
-+ (NSString *)dateStringWithDaysFromNow:(NSInteger)days format:(SecondToDateFormat)format;
++ (NSString *)dateStringWithDaysFromNow:(NSInteger)days format:(YLSecondToDateFormat)format;
 /**
  *  比较某一个日期是否比现在的日期早
  *

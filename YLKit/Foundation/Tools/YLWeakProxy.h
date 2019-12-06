@@ -12,8 +12,12 @@
 
 @interface YLWeakProxy : NSProxy
 
+/// 初始化
+/// @param target 要转发消息的对象
 + (instancetype)proxyWithTarget:(id)target;
 
+/// 初始化
+/// @param target 要转发消息的对象
 - (instancetype)initWithTarget:(id)target;
 
 @end

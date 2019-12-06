@@ -1,5 +1,5 @@
 //
-//  UILabel+YLInsets.h
+//  UILabel+YLKit.h
 //  YLKitsDemo
 //
 //  Created by Conner on 2019/10/19.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UILabel (YLInsets)
+@interface UILabel (YLKit)
 //内边距
 @property (nonatomic, assign) UIEdgeInsets contentInsets;
 @end

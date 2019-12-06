@@ -57,6 +57,19 @@
 + (NSData * _Nullable)AES128EncryptData:(NSData * _Nonnull)data
                                 withKey:(NSString * _Nonnull)key;
 
+/// AES128 CBC 加密
+/// @param data 加密数据
+/// @param key key
+/// @param iv 偏移量
++ (NSData * _Nullable)AES128EncryptData:(NSData * _Nonnull)data withKey:(NSString * _Nonnull)key iv:(NSString *_Nullable)iv;
+
+
+/// AES128 CBC 加密
+/// @param string 加密字符串
+/// @param key key
+/// @param iv 偏移值
++ (NSString * _Nullable)AES128EncryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key iv:(NSString *_Nullable)iv;
+
 /**
  *  Decrypt NSData in AES128
  *
@@ -67,6 +80,19 @@
  */
 + (NSData * _Nullable)AES128DecryptData:(NSData * _Nonnull)data
                                 withKey:(NSString * _Nonnull)key;
+
+/// AES128 CBC 解密
+/// @param data 解密数据
+/// @param key key
+/// @param iv 偏移
++ (NSData * _Nullable)AES128DecryptData:(NSData * _Nonnull)data withKey:(NSString * _Nonnull)key iv:(NSString *_Nullable)iv;
+
+
+/// AES128 CBC 解密
+/// @param string 解密数据
+/// @param key key
+/// @param iv 偏移
++ (NSString * _Nullable)AES128DecryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key iv:(NSString *_Nullable)iv;
 
 /**
  *  Encrypt NSData in AES256
@@ -96,9 +122,9 @@
  *  @param string NSString to be encrypted
  *  @param key  Key to encrypt data
  *
- *  @return Returns the encrypted NSData
+ *  @return Returns the encrypted NSString
  */
-+ (NSData * _Nullable)AES128EncryptString:(NSString * _Nonnull)string
++ (NSString * _Nullable)AES128EncryptString:(NSString * _Nonnull)string
                                   withKey:(NSString * _Nonnull)key;
 
 /**
@@ -107,9 +133,9 @@
  *  @param string NSString to be decrypted
  *  @param key  Key to decrypt data
  *
- *  @return Returns the decrypted NSData
+ *  @return Returns the decrypted NSString
  */
-+ (NSData * _Nullable)AES128DecryptString:(NSString * _Nonnull)string
++ (NSString * _Nullable)AES128DecryptString:(NSString * _Nonnull)string
                                   withKey:(NSString * _Nonnull)key;
 
 /**

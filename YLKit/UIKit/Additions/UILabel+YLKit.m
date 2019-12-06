@@ -1,15 +1,15 @@
 //
-//  UILabel+YLInsets.m
+//  UILabel+YLKit.m
 //  YLKitsDemo
 //
 //  Created by Conner on 2019/10/19.
 //  Copyright © 2019 Conner. All rights reserved.
 //
 
-#import "UILabel+YLInsets.h"
+#import "UILabel+YLKit.h"
 #import <objc/runtime.h>
 
-@implementation UILabel (YLInsets)
+@implementation UILabel (YLKit)
 static char kContentInsetsKey;
 static char kshowContentInsetsKey;
 
@@ -31,7 +31,7 @@ static char kshowContentInsetsKey;
 
     Method fromMethod = class_getInstanceMethod([self class], @selector(drawTextInRect:));
 
-    Method toMethod = class_getInstanceMethod([self class], @selector(tt_drawTextInRect:));
+    Method toMethod = class_getInstanceMethod([self class], @selector(yl_drawTextInRect:));
 
     // class_addMethod()
 

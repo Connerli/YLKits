@@ -101,7 +101,7 @@
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)getSystemTimeStringWithFormat:(SecondToDateFormat)format {
++ (NSString *)getSystemTimeStringWithFormat:(YLSecondToDateFormat)format {
     long long systemTime = [self getSystemTimeInterval];
     return [self timeStringWithInterval:systemTime format:format];
 }
@@ -129,23 +129,23 @@
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)timeStringWithInterval:(long long)timeInterval format:(SecondToDateFormat)format {
++ (NSString *)timeStringWithInterval:(long long)timeInterval format:(YLSecondToDateFormat)format {
     
-    NSDictionary *dataFormatDic = @{@(Second_To_Date_Format_yyyy):@"yyyy",
-                                    @(Second_To_Date_Format_MM):@"MM",
-                                    @(Second_To_Date_Format_dd):@"dd",
-                                    @(Second_To_Date_Format_hh):@"hh",
-                                    @(Second_To_Date_Format_HH):@"HH",
-                                    @(Second_To_Date_Format_mm):@"mm",
-                                    @(Second_To_Date_Format_MM_dd):@"MM-dd",
-                                    @(Second_To_Date_Format_yy_MM_dd):@"yy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_MM_dd):@"yyyy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
-                                    @(Second_To_Date_Format_HH_mm):@"HH:mm",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
-                                    @(Second_To_Date_Format_EEE):@"EEE",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
+    NSDictionary *dataFormatDic = @{@(YLDateFormat_yyyy):@"yyyy",
+                                    @(YLDateFormat_MM):@"MM",
+                                    @(YLDateFormat_dd):@"dd",
+                                    @(YLDateFormat_hh):@"hh",
+                                    @(YLDateFormat_HH):@"HH",
+                                    @(YLDateFormat_mm):@"mm",
+                                    @(YLDateFormat_MM_dd):@"MM-dd",
+                                    @(YLDateFormat_yy_MM_dd):@"yy-MM-dd",
+                                    @(YLDateFormat_yyyy_MM_dd):@"yyyy-MM-dd",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
+                                    @(YLDateFormat_HH_mm):@"HH:mm",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
+                                    @(YLDateFormat_EEE):@"EEE",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
     
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:timeInterval / 1000];
     NSDateFormatter *dateFormat = [self sharedInstance].dateFormatter;
@@ -160,22 +160,22 @@
  *
  *  @return 指定格式时间字符串
  */
-+ (NSString *)timeStringWithDate:(NSDate *)date format:(SecondToDateFormat)format {
-    NSDictionary *dataFormatDic = @{@(Second_To_Date_Format_yyyy):@"yyyy",
-                                    @(Second_To_Date_Format_MM):@"MM",
-                                    @(Second_To_Date_Format_dd):@"dd",
-                                    @(Second_To_Date_Format_hh):@"hh",
-                                    @(Second_To_Date_Format_HH):@"HH",
-                                    @(Second_To_Date_Format_mm):@"mm",
-                                    @(Second_To_Date_Format_MM_dd):@"MM-dd",
-                                    @(Second_To_Date_Format_yy_MM_dd):@"yy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_MM_dd):@"yyyy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
-                                    @(Second_To_Date_Format_HH_mm):@"HH:mm",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
-                                    @(Second_To_Date_Format_EEE):@"EEE",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
++ (NSString *)timeStringWithDate:(NSDate *)date format:(YLSecondToDateFormat)format {
+    NSDictionary *dataFormatDic = @{@(YLDateFormat_yyyy):@"yyyy",
+                                    @(YLDateFormat_MM):@"MM",
+                                    @(YLDateFormat_dd):@"dd",
+                                    @(YLDateFormat_hh):@"hh",
+                                    @(YLDateFormat_HH):@"HH",
+                                    @(YLDateFormat_mm):@"mm",
+                                    @(YLDateFormat_MM_dd):@"MM-dd",
+                                    @(YLDateFormat_yy_MM_dd):@"yy-MM-dd",
+                                    @(YLDateFormat_yyyy_MM_dd):@"yyyy-MM-dd",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
+                                    @(YLDateFormat_HH_mm):@"HH:mm",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
+                                    @(YLDateFormat_EEE):@"EEE",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
     NSDateFormatter *dateFormat = [self sharedInstance].dateFormatter;
     dateFormat.dateFormat = dataFormatDic[@(format)];
     return [dateFormat stringFromDate:date];
@@ -188,22 +188,22 @@
  *
  *  @return 指定格式时间字符串
  */
-+ (NSDate *)timeDateWithString:(NSString *)timeString format:(SecondToDateFormat)format {
-    NSDictionary *dataFormatDic = @{@(Second_To_Date_Format_yyyy):@"yyyy",
-                                    @(Second_To_Date_Format_MM):@"MM",
-                                    @(Second_To_Date_Format_dd):@"dd",
-                                    @(Second_To_Date_Format_hh):@"hh",
-                                    @(Second_To_Date_Format_HH):@"HH",
-                                    @(Second_To_Date_Format_mm):@"mm",
-                                    @(Second_To_Date_Format_MM_dd):@"MM-dd",
-                                    @(Second_To_Date_Format_yy_MM_dd):@"yy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_MM_dd):@"yyyy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
-                                    @(Second_To_Date_Format_HH_mm):@"HH:mm",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
-                                    @(Second_To_Date_Format_EEE):@"EEE",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
++ (NSDate *)timeDateWithString:(NSString *)timeString format:(YLSecondToDateFormat)format {
+    NSDictionary *dataFormatDic = @{@(YLDateFormat_yyyy):@"yyyy",
+                                    @(YLDateFormat_MM):@"MM",
+                                    @(YLDateFormat_dd):@"dd",
+                                    @(YLDateFormat_hh):@"hh",
+                                    @(YLDateFormat_HH):@"HH",
+                                    @(YLDateFormat_mm):@"mm",
+                                    @(YLDateFormat_MM_dd):@"MM-dd",
+                                    @(YLDateFormat_yy_MM_dd):@"yy-MM-dd",
+                                    @(YLDateFormat_yyyy_MM_dd):@"yyyy-MM-dd",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
+                                    @(YLDateFormat_HH_mm):@"HH:mm",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
+                                    @(YLDateFormat_EEE):@"EEE",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
     NSDateFormatter *dateFormat = [self sharedInstance].dateFormatter;
     dateFormat.dateFormat = dataFormatDic[@(format)];
     return [dateFormat dateFromString:timeString];
@@ -335,23 +335,23 @@
  *  @param days  天数
  *  @param format 日期格式
  */
-+ (NSString *)dateStringWithDaysFromNow: (NSInteger)days format:(SecondToDateFormat)format{
++ (NSString *)dateStringWithDaysFromNow: (NSInteger)days format:(YLSecondToDateFormat)format{
     
-    NSDictionary *dataFormatDic = @{@(Second_To_Date_Format_yyyy):@"yyyy",
-                                    @(Second_To_Date_Format_MM):@"MM",
-                                    @(Second_To_Date_Format_dd):@"dd",
-                                    @(Second_To_Date_Format_hh):@"hh",
-                                    @(Second_To_Date_Format_HH):@"HH",
-                                    @(Second_To_Date_Format_mm):@"mm",
-                                    @(Second_To_Date_Format_MM_dd):@"MM-dd",
-                                    @(Second_To_Date_Format_yy_MM_dd):@"yy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_MM_dd):@"yyyy-MM-dd",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
-                                    @(Second_To_Date_Format_HH_mm):@"HH:mm",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
-                                    @(Second_To_Date_Format_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
-                                    @(Second_To_Date_Format_EEE):@"EEE",
-                                    @(Second_To_Date_Format_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
+    NSDictionary *dataFormatDic = @{@(YLDateFormat_yyyy):@"yyyy",
+                                    @(YLDateFormat_MM):@"MM",
+                                    @(YLDateFormat_dd):@"dd",
+                                    @(YLDateFormat_hh):@"hh",
+                                    @(YLDateFormat_HH):@"HH",
+                                    @(YLDateFormat_mm):@"mm",
+                                    @(YLDateFormat_MM_dd):@"MM-dd",
+                                    @(YLDateFormat_yy_MM_dd):@"yy-MM-dd",
+                                    @(YLDateFormat_yyyy_MM_dd):@"yyyy-MM-dd",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd):@"yyyy/MM/dd",
+                                    @(YLDateFormat_HH_mm):@"HH:mm",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm):@"yyyy-MM-dd HH:mm",
+                                    @(YLDateFormat_yyyy_s_MM_s_dd_HH_mm):@"yyyy/MM/dd HH:mm",
+                                    @(YLDateFormat_EEE):@"EEE",
+                                    @(YLDateFormat_yyyy_MM_dd_HH_mm_ss):@"yyyy-MM-dd HH:mm:ss"};
     NSDate *date = [self dateWithDaysFromNow:days];
     NSDateFormatter *dateFormat = [self sharedInstance].dateFormatter;
     dateFormat.dateFormat = dataFormatDic[@(format)];

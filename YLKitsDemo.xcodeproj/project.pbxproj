@@ -13,7 +13,7 @@
 		13332B982391078A007B4021 /* YLTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B972391078A007B4021 /* YLTimeUtils.m */; };
 		13332B9B23910B5A007B4021 /* NSTimer+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */; };
 		13470800236AEC7800BCB549 /* YLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 134707FF236AEC7800BCB549 /* YLAppInfo.m */; };
-		136E8EFF235ABB780033C558 /* UILabel+YLInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 136E8EFE235ABB780033C558 /* UILabel+YLInsets.m */; };
+		136E8EFF235ABB780033C558 /* UILabel+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 136E8EFE235ABB780033C558 /* UILabel+YLKit.m */; };
 		13E5FECC228A54B80060E5A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FECB228A54B80060E5A8 /* AppDelegate.m */; };
 		13E5FECF228A54B80060E5A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FECE228A54B80060E5A8 /* ViewController.m */; };
 		13E5FED2228A54B80060E5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E5FED0228A54B80060E5A8 /* Main.storyboard */; };
@@ -50,8 +50,8 @@
 		13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+YLKit.m"; sourceTree = "<group>"; };
 		134707FE236AEC7800BCB549 /* YLAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLAppInfo.h; sourceTree = "<group>"; };
 		134707FF236AEC7800BCB549 /* YLAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAppInfo.m; sourceTree = "<group>"; };
-		136E8EFD235ABB780033C558 /* UILabel+YLInsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLInsets.h"; sourceTree = "<group>"; };
-		136E8EFE235ABB780033C558 /* UILabel+YLInsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLInsets.m"; sourceTree = "<group>"; };
+		136E8EFD235ABB780033C558 /* UILabel+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLKit.h"; sourceTree = "<group>"; };
+		136E8EFE235ABB780033C558 /* UILabel+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLKit.m"; sourceTree = "<group>"; };
 		13E5FEC7228A54B80060E5A8 /* YLKitsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKitsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E5FECA228A54B80060E5A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13E5FECB228A54B80060E5A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 				13FD5977231E74E10030B7D0 /* UITableView+YLKit.h */,
 				13FD5984231E74E20030B7D0 /* UITableView+YLKit.m */,
 				13FD5979231E74E20030B7D0 /* UIView */,
-				136E8EFD235ABB780033C558 /* UILabel+YLInsets.h */,
-				136E8EFE235ABB780033C558 /* UILabel+YLInsets.m */,
+				136E8EFD235ABB780033C558 /* UILabel+YLKit.h */,
+				136E8EFE235ABB780033C558 /* UILabel+YLKit.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				13FD599D231E74E20030B7D0 /* UIColor+YLKit.m in Sources */,
 				13FD59A0231E74E20030B7D0 /* NSDictionary+YLKit.m in Sources */,
 				13FD5996231E74E20030B7D0 /* UIImage+YLKit.m in Sources */,
-				136E8EFF235ABB780033C558 /* UILabel+YLInsets.m in Sources */,
+				136E8EFF235ABB780033C558 /* UILabel+YLKit.m in Sources */,
 				130084F9238F77BD00BE809B /* YLEncryption.m in Sources */,
 				13FD599E231E74E20030B7D0 /* CALayer+YLKit.m in Sources */,
 				13FD59A3231E74E20030B7D0 /* NSFileManager+YLKit.m in Sources */,

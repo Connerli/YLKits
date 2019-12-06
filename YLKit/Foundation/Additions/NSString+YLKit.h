@@ -13,7 +13,7 @@
 @interface NSString (YLKit)
 
 /** 检测是否是空字符串(去除空字符后) */
-+ (BOOL)isEmpty:(NSString *)string;
++ (BOOL)isEmpty:(NSString *_Nullable)string;
 /**
  *  Search in a given string a substring from the start char to the end char (excluded form final string).
  *  Example: "This is a test" with start char 'h' and end char 't' will return "is is a "
