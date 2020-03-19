@@ -19,6 +19,6 @@
 #import "UIFont+YLKit.h"
 #import "UITableView+YLKit.h"
 #import "UIImage+YLKit.h"
-
+#import "UILabel+YLKit.h"
 
 #endif /* YLUIKitHeader_h */
