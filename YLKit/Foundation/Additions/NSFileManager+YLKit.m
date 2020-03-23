@@ -56,6 +56,45 @@
     
     return [NSKeyedUnarchiver unarchiveObjectWithFile:_path];
 }
++ (BOOL)saveDicToPath:(DirectoryType)path withFilename:(NSString *)fileName dic:(NSDictionary *)dic {
+    NSString *_path;
+    switch (path) {
+        case DirectoryTypeMainBundle:
+            _path = [self getBundlePathForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeLibrary:
+            _path = [self getLibraryDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeDocuments:
+            _path = [self getDocumentsDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeCache:
+            _path = [self getCacheDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+    }
+    
+    return [NSKeyedArchiver archiveRootObject:dic toFile:_path];
+}
+
++ (NSDictionary *)loadDicFromPath:(DirectoryType)path withFilename:(NSString *)fileName {
+    NSString *_path;
+    switch (path) {
+        case DirectoryTypeMainBundle:
+            _path = [self getBundlePathForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeLibrary:
+            _path = [self getLibraryDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeDocuments:
+            _path = [self getDocumentsDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+        case DirectoryTypeCache:
+            _path = [self getCacheDirectoryForFile:[NSString stringWithFormat:@"%@.plist", fileName]];
+            break;
+    }
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:_path];
+}
+
 
 + (NSString * _Nonnull)getBundlePathForFile:(NSString * _Nonnull)fileName {
     NSString *fileExtension = [fileName pathExtension];

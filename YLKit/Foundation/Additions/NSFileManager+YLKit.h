@@ -70,6 +70,29 @@ typedef NS_ENUM(NSInteger, DirectoryType) {
                             withFilename:(NSString * _Nonnull)fileName;
 
 /**
+ *  Save a given array into a PLIST with the given filename
+ *
+ *  @param path     Path of the PLIST
+ *  @param fileName PLIST filename
+ *  @param dic    dic to save into PLIST
+ *
+ *  @return Returns YES if the operation was successful, otherwise NO
+ */
++ (BOOL)saveDicToPath:(DirectoryType)path
+           withFilename:(NSString * _Nonnull)fileName
+                  dic:(NSDictionary * _Nonnull)dic;
+
+/**
+ *  Load array from a PLIST with the given filename
+ *
+ *  @param path     Path of the PLIST
+ *  @param fileName PLIST filename
+ *
+ *  @return Returns the loaded dic
+ */
++ (NSDictionary * _Nullable)loadDicFromPath:(DirectoryType)path
+                            withFilename:(NSString * _Nonnull)fileName;
+/**
  *  Get the Bundle path for a filename
  *
  *  @param fileName Filename
