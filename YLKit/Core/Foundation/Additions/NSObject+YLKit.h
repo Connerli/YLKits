@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
  @return 属性数组
  */
 + (NSArray *)getAllProperty:(id)object;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

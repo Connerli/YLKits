@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		130084F9238F77BD00BE809B /* YLEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 130084F8238F77BD00BE809B /* YLEncryption.m */; };
 		130084FC238F788C00BE809B /* NSData+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 130084FB238F788C00BE809B /* NSData+YLKit.m */; };
+		1320A10E2456B0D80006D23D /* YLForwardingTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320A10D2456B0D80006D23D /* YLForwardingTarget.m */; };
+		1320A1162456BCCB0006D23D /* NSObject+YLForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320A1152456BCCB0006D23D /* NSObject+YLForwarding.m */; };
+		1320A11A2456BE690006D23D /* NSObject+YLMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1320A1192456BE690006D23D /* NSObject+YLMethodSwizzling.m */; };
 		13332B9523910580007B4021 /* YLWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B9423910580007B4021 /* YLWeakProxy.m */; };
 		13332B982391078A007B4021 /* YLTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B972391078A007B4021 /* YLTimeUtils.m */; };
 		13332B9B23910B5A007B4021 /* NSTimer+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13332B9A23910B5A007B4021 /* NSTimer+YLKit.m */; };
 		13470800236AEC7800BCB549 /* YLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 134707FF236AEC7800BCB549 /* YLAppInfo.m */; };
 		136E8EFF235ABB780033C558 /* UILabel+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 136E8EFE235ABB780033C558 /* UILabel+YLKit.m */; };
+		13A33029245170F7003BC512 /* NSMutableArray+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33028245170F7003BC512 /* NSMutableArray+YLKit.m */; };
 		13C0F6F8241A32DF00F1A203 /* UIFont+YLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C0F6F7241A32DF00F1A203 /* UIFont+YLKit.m */; };
 		13E5FECC228A54B80060E5A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FECB228A54B80060E5A8 /* AppDelegate.m */; };
 		13E5FECF228A54B80060E5A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E5FECE228A54B80060E5A8 /* ViewController.m */; };
@@ -43,6 +47,12 @@
 		130084F8238F77BD00BE809B /* YLEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLEncryption.m; sourceTree = "<group>"; };
 		130084FA238F788C00BE809B /* NSData+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+YLKit.h"; sourceTree = "<group>"; };
 		130084FB238F788C00BE809B /* NSData+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+YLKit.m"; sourceTree = "<group>"; };
+		1320A10C2456B0D80006D23D /* YLForwardingTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLForwardingTarget.h; sourceTree = "<group>"; };
+		1320A10D2456B0D80006D23D /* YLForwardingTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLForwardingTarget.m; sourceTree = "<group>"; };
+		1320A1142456BCCB0006D23D /* NSObject+YLForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YLForwarding.h"; sourceTree = "<group>"; };
+		1320A1152456BCCB0006D23D /* NSObject+YLForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YLForwarding.m"; sourceTree = "<group>"; };
+		1320A1182456BE690006D23D /* NSObject+YLMethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YLMethodSwizzling.h"; sourceTree = "<group>"; };
+		1320A1192456BE690006D23D /* NSObject+YLMethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YLMethodSwizzling.m"; sourceTree = "<group>"; };
 		13332B9323910580007B4021 /* YLWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLWeakProxy.h; sourceTree = "<group>"; };
 		13332B9423910580007B4021 /* YLWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLWeakProxy.m; sourceTree = "<group>"; };
 		13332B962391078A007B4021 /* YLTimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLTimeUtils.h; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 		134707FF236AEC7800BCB549 /* YLAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAppInfo.m; sourceTree = "<group>"; };
 		136E8EFD235ABB780033C558 /* UILabel+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YLKit.h"; sourceTree = "<group>"; };
 		136E8EFE235ABB780033C558 /* UILabel+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YLKit.m"; sourceTree = "<group>"; };
+		13A33027245170F7003BC512 /* NSMutableArray+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+YLKit.h"; sourceTree = "<group>"; };
+		13A33028245170F7003BC512 /* NSMutableArray+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+YLKit.m"; sourceTree = "<group>"; };
 		13C0F6F6241A32DF00F1A203 /* UIFont+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+YLKit.h"; sourceTree = "<group>"; };
 		13C0F6F7241A32DF00F1A203 /* UIFont+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YLKit.m"; sourceTree = "<group>"; };
 		13E5FEC7228A54B80060E5A8 /* YLKitsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKitsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +125,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1320A10F2456BB5D0006D23D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				13FD5989231E74E20030B7D0 /* Foundation */,
+				13FD5974231E74E10030B7D0 /* UIKit */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1320A1102456BB7A0006D23D /* Forwarding */ = {
+			isa = PBXGroup;
+			children = (
+				1320A10C2456B0D80006D23D /* YLForwardingTarget.h */,
+				1320A10D2456B0D80006D23D /* YLForwardingTarget.m */,
+				1320A1142456BCCB0006D23D /* NSObject+YLForwarding.h */,
+				1320A1152456BCCB0006D23D /* NSObject+YLForwarding.m */,
+			);
+			path = Forwarding;
+			sourceTree = "<group>";
+		};
+		1320A1172456BE120006D23D /* MethodSwizzling */ = {
+			isa = PBXGroup;
+			children = (
+				1320A1182456BE690006D23D /* NSObject+YLMethodSwizzling.h */,
+				1320A1192456BE690006D23D /* NSObject+YLMethodSwizzling.m */,
+			);
+			path = MethodSwizzling;
+			sourceTree = "<group>";
+		};
 		13E5FEBE228A54B80060E5A8 = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +212,9 @@
 				13FD5995231E74E20030B7D0 /* YLKit.h */,
 				13FD5972231E74E10030B7D0 /* YLUIKitHeader.h */,
 				13FD5971231E74E10030B7D0 /* YLFoundationHeader.h */,
-				13FD5989231E74E20030B7D0 /* Foundation */,
-				13FD5974231E74E10030B7D0 /* UIKit */,
+				1320A10F2456BB5D0006D23D /* Core */,
+				1320A1102456BB7A0006D23D /* Forwarding */,
+				1320A1172456BE120006D23D /* MethodSwizzling */,
 			);
 			path = YLKit;
 			sourceTree = "<group>";
@@ -234,6 +276,8 @@
 			children = (
 				13FD598E231E74E20030B7D0 /* NSArray+YLKit.h */,
 				13FD5993231E74E20030B7D0 /* NSArray+YLKit.m */,
+				13A33027245170F7003BC512 /* NSMutableArray+YLKit.h */,
+				13A33028245170F7003BC512 /* NSMutableArray+YLKit.m */,
 				13FD5992231E74E20030B7D0 /* NSDictionary+YLKit.h */,
 				13FD598D231E74E20030B7D0 /* NSDictionary+YLKit.m */,
 				13FD598F231E74E20030B7D0 /* NSFileManager+YLKit.h */,
@@ -256,7 +300,6 @@
 				C45F69918E8A762B61029CDC /* Pods-YLKitsDemo.debug.xcconfig */,
 				5B756F92C144C4C99DBAE9B7 /* Pods-YLKitsDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -392,12 +435,16 @@
 				13E5FEDA228A54BA0060E5A8 /* main.m in Sources */,
 				13E5FECC228A54B80060E5A8 /* AppDelegate.m in Sources */,
 				13FD599B231E74E20030B7D0 /* UIButton+YLKit.m in Sources */,
+				1320A10E2456B0D80006D23D /* YLForwardingTarget.m in Sources */,
 				13FD599A231E74E20030B7D0 /* UIView+YLGradient.m in Sources */,
 				130084FC238F788C00BE809B /* NSData+YLKit.m in Sources */,
 				13332B9523910580007B4021 /* YLWeakProxy.m in Sources */,
+				1320A1162456BCCB0006D23D /* NSObject+YLForwarding.m in Sources */,
+				1320A11A2456BE690006D23D /* NSObject+YLMethodSwizzling.m in Sources */,
 				13FD599C231E74E20030B7D0 /* UITableView+YLKit.m in Sources */,
 				13332B982391078A007B4021 /* YLTimeUtils.m in Sources */,
 				13FD5999231E74E20030B7D0 /* UIView+YLKit.m in Sources */,
+				13A33029245170F7003BC512 /* NSMutableArray+YLKit.m in Sources */,
 				13FB8058235D987E00026AD2 /* YLRouterNavigation.m in Sources */,
 				13FD599D231E74E20030B7D0 /* UIColor+YLKit.m in Sources */,
 				13FD59A0231E74E20030B7D0 /* NSDictionary+YLKit.m in Sources */,

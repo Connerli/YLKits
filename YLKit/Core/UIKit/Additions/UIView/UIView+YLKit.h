@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (YLKit)
 //控制器
-- (UIViewController*)viewController;
+- (UIViewController*)yl_viewController;
 //nib 文件
-+ (UINib *)viewWithNib;
++ (UINib *)yl_viewWithNib;
 @end
 
 NS_ASSUME_NONNULL_END

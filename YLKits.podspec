@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YLKits"
-  s.version      = "0.0.8"
+  s.version      = "0.1.0"
   s.summary      = "常用工具类，分类，集成类"
 
   # This description is used to generate tags and improve search results.
@@ -89,17 +89,29 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # s.source_files  = "YLKit", "YLKit/Foundation/Additions/*.{h,m}","YLKit/UIKit/Additions/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   s.source_files = "YLKit/YLKit.h","YLKit/YLUIKitHeader.h","YLKit/YLFoundationHeader.h"
   # s.public_header_files = "YLKit/YLKit.h"
+  s.default_subspec = 'Core'
 
-  s.subspec "Foundation" do |ss|
-    ss.source_files = "YLKit/Foundation/**/*.{h,m}"
+  s.subspec "Core" do |ss|
+
+    ss.subspec "Foundation" do |sss|
+       sss.source_files = "YLKit/Core/Foundation/**/*.{h,m}"
+    end 
+
+    ss.subspec "UIKit" do |sss|
+       sss.source_files = "YLKit/Core/UIKit/**/*.{h,m}"
+    end 
+
   end 
 
-  s.subspec "UIKit" do |ss|
-    ss.source_files = "YLKit/UIKit/**/*.{h,m}"
+  s.subspec "Forwarding" do |ss|
+     ss.source_files = "YLKit/Forwarding/*.{h,m}"
+  end 
+  
+  s.subspec "MethodSwizzling" do |ss|
+     ss.source_files = "YLKit/MethodSwizzling/*.{h,m}"
   end 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

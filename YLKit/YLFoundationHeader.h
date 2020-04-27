@@ -15,7 +15,7 @@
 #import "NSObject+YLKit.h"
 #import "NSDictionary+YLKit.h"
 #import "NSFileManager+YLKit.h"
-
+#import "NSMutableArray+YLKit.h"
 
 //Tools
 #import "YLAppInfo.h"
@@ -23,5 +23,6 @@
 #import "YLWeakProxy.h"
 #import "YLTimeUtils.h"
 #import "YLRouterNavigation.h"
+#import "YLForwardingTarget.h"
 
 #endif /* YLFoundationHeader_h */
