@@ -90,10 +90,9 @@ Pod::Spec.new do |s|
   #
 
   # s.exclude_files = "Classes/Exclude"
-  s.source_files = "YLKit/YLKit.h","YLKit/YLUIKitHeader.h","YLKit/YLFoundationHeader.h"
-  # s.public_header_files = "YLKit/YLKit.h"
+  s.source_files = "YLKit/*.h"
+  s.public_header_files = "YLKit/*.h"
   s.default_subspec = 'Core'
-
   s.subspec "Core" do |ss|
 
     ss.subspec "Foundation" do |sss|
@@ -107,12 +106,13 @@ Pod::Spec.new do |s|
   end 
 
   s.subspec "Forwarding" do |ss|
+     ss.public_header_files = "YLKit/Forwarding/*.h"
      ss.source_files = "YLKit/Forwarding/*.{h,m}"
   end 
   
-  s.subspec "MethodSwizzling" do |ss|
-     ss.source_files = "YLKit/MethodSwizzling/*.{h,m}"
-  end 
+  # s.subspec "MethodSwizzling" do |ss|
+  #    ss.source_files = "YLKit/MethodSwizzling/*.{h,m}"
+  # end 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
