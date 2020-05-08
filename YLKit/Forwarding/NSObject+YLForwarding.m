@@ -1,6 +1,6 @@
 //
 //  NSObject+YLForwarding.m
-//  YLKitsDemo
+//  YLKits
 //
 //  Created by Conner on 2020/4/27.
 //  Copyright © 2020 Conner. All rights reserved.
@@ -17,7 +17,7 @@ static YLForwardingTarget *_target = nil;
 + (void)load {
    static dispatch_once_t onceToken;
    dispatch_once(&onceToken, ^{
-       _target = [YLForwardingTarget new];;
+       _target = [YLForwardingTarget new];
        not_recognize_selector_classMethodSwizzle([self class], @selector(forwardingTargetForSelector:), @selector(yl_swizzleForwardingTargetForSelector:));
    });
 }

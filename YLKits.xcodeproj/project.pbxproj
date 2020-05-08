@@ -67,7 +67,7 @@
 		13A33028245170F7003BC512 /* NSMutableArray+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+YLKit.m"; sourceTree = "<group>"; };
 		13C0F6F6241A32DF00F1A203 /* UIFont+YLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+YLKit.h"; sourceTree = "<group>"; };
 		13C0F6F7241A32DF00F1A203 /* UIFont+YLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YLKit.m"; sourceTree = "<group>"; };
-		13E5FEC7228A54B80060E5A8 /* YLKitsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKitsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13E5FEC7228A54B80060E5A8 /* YLKits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLKits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E5FECA228A54B80060E5A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13E5FECB228A54B80060E5A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		13E5FECD228A54B80060E5A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		13E5FEC8228A54B80060E5A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13E5FEC7228A54B80060E5A8 /* YLKitsDemo.app */,
+				13E5FEC7228A54B80060E5A8 /* YLKits.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,9 +314,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13E5FEC6228A54B80060E5A8 /* YLKitsDemo */ = {
+		13E5FEC6228A54B80060E5A8 /* YLKits */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13E5FEDD228A54BA0060E5A8 /* Build configuration list for PBXNativeTarget "YLKitsDemo" */;
+			buildConfigurationList = 13E5FEDD228A54BA0060E5A8 /* Build configuration list for PBXNativeTarget "YLKits" */;
 			buildPhases = (
 				770125499468B859FA392699 /* [CP] Check Pods Manifest.lock */,
 				13E5FEC3228A54B80060E5A8 /* Sources */,
@@ -328,9 +328,9 @@
 			);
 			dependencies = (
 			);
-			name = YLKitsDemo;
+			name = YLKits;
 			productName = YLKitsDemo;
-			productReference = 13E5FEC7228A54B80060E5A8 /* YLKitsDemo.app */;
+			productReference = 13E5FEC7228A54B80060E5A8 /* YLKits.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +348,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 13E5FEC2228A54B80060E5A8 /* Build configuration list for PBXProject "YLKitsDemo" */;
+			buildConfigurationList = 13E5FEC2228A54B80060E5A8 /* Build configuration list for PBXProject "YLKits" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -361,7 +361,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13E5FEC6228A54B80060E5A8 /* YLKitsDemo */,
+				13E5FEC6228A54B80060E5A8 /* YLKits */,
 			);
 		};
 /* End PBXProject section */
@@ -631,7 +631,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13E5FEC2228A54B80060E5A8 /* Build configuration list for PBXProject "YLKitsDemo" */ = {
+		13E5FEC2228A54B80060E5A8 /* Build configuration list for PBXProject "YLKits" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13E5FEDB228A54BA0060E5A8 /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13E5FEDD228A54BA0060E5A8 /* Build configuration list for PBXNativeTarget "YLKitsDemo" */ = {
+		13E5FEDD228A54BA0060E5A8 /* Build configuration list for PBXNativeTarget "YLKits" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13E5FEDE228A54BA0060E5A8 /* Debug */,
