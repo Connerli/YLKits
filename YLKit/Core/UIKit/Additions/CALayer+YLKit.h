@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
  设置border颜色 主要用于xib方便设置色值
  @param color 色值
  */
-- (void)setBorderUIColor:(UIColor *)color;
+- (void)yl_setBorderUIColor:(UIColor *)color;
 
 /**
  border的UI 色值
  @return 色值
  */
-- (UIColor *)borderUIColor;
+- (UIColor *)yl_borderUIColor;
 @end
 
 NS_ASSUME_NONNULL_END

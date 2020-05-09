@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param dictionary 要转换的字典
  @return jsonString
  */
-+ (NSString * _Nonnull)dictionaryToJSON:(NSDictionary * _Nonnull)dictionary;
++ (NSString * _Nonnull)yl_dictionaryToJSON:(NSDictionary * _Nonnull)dictionary;
 
 
 /**
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return 转换后的string
  */
-- (NSString * _Nonnull)dictionaryToJSON;
+- (NSString * _Nonnull)yl_dictionaryToJSON;
 
 
 /**
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param key 要获取的key
  @return key对应的value值
  */
-- (id _Nullable)safeObjectForKey:(NSString * _Nonnull)key;
+- (id _Nullable)yl_safeObjectForKey:(NSString * _Nonnull)key;
 
 @end
 

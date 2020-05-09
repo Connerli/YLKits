@@ -13,7 +13,7 @@
 @interface NSString (YLKit)
 
 /** 检测是否是空字符串(去除空字符后) */
-+ (BOOL)isEmpty:(NSString *_Nullable)string;
++ (BOOL)yl_isEmpty:(NSString *_Nullable)string;
 /**
  *  Search in a given string a substring from the start char to the end char (excluded form final string).
  *  Example: "This is a test" with start char 'h' and end char 't' will return "is is a "
@@ -24,7 +24,7 @@
  *
  *  @return Returns the substring
  */
-+ (NSString * _Nonnull)searchInString:(NSString *_Nonnull)string
++ (NSString * _Nonnull)yl_searchInString:(NSString *_Nonnull)string
                             charStart:(char)start
                               charEnd:(char)end;
 
@@ -37,7 +37,7 @@
  *
  *  @return Returns the substring
  */
-- (NSString * _Nonnull)searchCharStart:(char)start
+- (NSString * _Nonnull)yl_searchCharStart:(char)start
                                charEnd:(char)end;
 
 /**
@@ -47,7 +47,7 @@
  *
  *  @return Returns the index of the given character, -1 if not found
  */
-- (NSInteger)indexOfCharacter:(char)character;
+- (NSInteger)yl_indexOfCharacter:(char)character;
 
 /**
  *  Creates a substring from the given character
@@ -56,7 +56,7 @@
  *
  *  @return Returns the substring from character
  */
-- (NSString * _Nonnull)substringFromCharacter:(char)character;
+- (NSString * _Nonnull)yl_substringFromCharacter:(char)character;
 
 /**
  *  Creates a substring to the given character
@@ -65,7 +65,7 @@
  *
  *  @return Returns the substring to character
  */
-- (NSString * _Nonnull)substringToCharacter:(char)character;
+- (NSString * _Nonnull)yl_substringToCharacter:(char)character;
 
 /**
  *  Check if self has the given substring in case-sensitive
@@ -74,7 +74,7 @@
  *
  *  @return Returns YES if founded, NO if not
  */
-- (BOOL)hasString:(NSString * _Nonnull)substring;
+- (BOOL)yl_hasString:(NSString * _Nonnull)substring;
 
 /**
  *  Check if self has the given substring specifying if is case-sensitive or not
@@ -84,7 +84,7 @@
  *
  *  @return Returns YES if founded, NO if not
  */
-- (BOOL)hasString:(NSString * _Nonnull)substring
+- (BOOL)yl_hasString:(NSString * _Nonnull)substring
     caseSensitive:(BOOL)caseSensitive;
 
 /**
@@ -92,7 +92,7 @@
  *
  *  @return Returns YES if it's an email, NO if not
  */
-- (BOOL)isEmail;
+- (BOOL)yl_isEmail;
 
 /**
  *  Check if the given string is an email
@@ -101,7 +101,7 @@
  *
  *  @return Returns YES if it's an email, NO if not
  */
-+ (BOOL)isEmail:(NSString * _Nonnull)email;
++ (BOOL)yl_isEmail:(NSString * _Nonnull)email;
 
 /**
  *  Convert a string to UTF8
@@ -110,7 +110,7 @@
  *
  *  @return Returns the converted string
  */
-+ (NSString * _Nonnull)convertToUTF8Entities:(NSString * _Nonnull)string;
++ (NSString * _Nonnull)yl_convertToUTF8Entities:(NSString * _Nonnull)string;
 
 /**
  *  Encode the given string to Base64
@@ -119,14 +119,14 @@
  *
  *  @return Returns the encoded string
  */
-+ (NSString * _Nonnull)encodeToBase64:(NSString * _Nonnull)string;
++ (NSString * _Nonnull)yl_encodeToBase64:(NSString * _Nonnull)string;
 
 /**
  *  Encode the given string to Base64
  *
  *  @return Returns the encoded string
  */
-- (NSString * _Nonnull)encodeToBase64;
+- (NSString * _Nonnull)yl_encodeToBase64;
 
 /**
  *  Decode the given Base64 to string
@@ -135,14 +135,14 @@
  *
  *  @return Returns the decoded string
  */
-+ (NSString * _Nonnull)decodeBase64:(NSString * _Nonnull)string;
++ (NSString * _Nonnull)yl_decodeBase64:(NSString * _Nonnull)string;
 
 /**
  *  Decode the given Base64 to string
  *
  *  @return Returns the decoded string
  */
-- (NSString * _Nonnull)decodeBase64;
+- (NSString * _Nonnull)yl_decodeBase64;
 
 /**
  *  Convert the given NSString to NSData
@@ -151,14 +151,14 @@
  *
  *  @return Returns the converted NSString as NSData
  */
-+ (NSData * _Nonnull)convertToNSData:(NSString * _Nonnull)string;
++ (NSData * _Nonnull)yl_convertToNSData:(NSString * _Nonnull)string;
 
 /**
  *  Convert self to a NSData
  *
  *  @return Returns self as NSData
  */
-- (NSData * _Nonnull)convertToNSData;
+- (NSData * _Nonnull)yl_convertToNSData;
 
 /**
  *  Conver self to a capitalized string.
@@ -166,28 +166,28 @@
  *
  *  @return Returns the capitalized sentence string
  */
-- (NSString * _Nonnull)sentenceCapitalizedString;
+- (NSString * _Nonnull)yl_sentenceCapitalizedString;
 
 /**
  *  Returns a human legible string from a timestamp
  *
  *  @return Returns a human legible string from a timestamp
  */
-- (NSString * _Nonnull)dateFromTimestamp;
+- (NSString * _Nonnull)yl_dateFromTimestamp;
 
 /**
  *  Encode self to an encoded url string
  *
  *  @return Returns the encoded NSString
  */
-- (NSString * _Nonnull)URLEncode;
+- (NSString * _Nonnull)yl_URLEncode;
 
 /**
  *  Remove double or more duplicated spaces
  *
  *  @return String without additional spaces
  */
-- (NSString * _Nonnull)removeExtraSpaces;
+- (NSString * _Nonnull)yl_removeExtraSpaces;
 
 /**
  *  Returns a new string containing matching regular expressions replaced with the template string
@@ -197,7 +197,7 @@
  *
  *  @return Returns a new string containing matching regular expressions replaced with the template string
  */
-- (NSString * _Nonnull)stringByReplacingWithRegex:(NSString * _Nonnull)regexString
+- (NSString * _Nonnull)yl_stringByReplacingWithRegex:(NSString * _Nonnull)regexString
                                        withString:(NSString * _Nonnull)replacement;
 
 /**
@@ -206,7 +206,7 @@
  *
  *  @return Readable string
  */
-- (NSString * _Nonnull)HEXToString;
+- (NSString * _Nonnull)yl_HEXToString;
 
 /**
  *  Convert string to HEX string.
@@ -214,35 +214,35 @@
  *
  *  @return HEX string
  */
-- (NSString * _Nonnull)stringToHEX;
+- (NSString * _Nonnull)yl_stringToHEX;
 
 /**
  *  Used to create an UUID as NSString
  *
  *  @return Returns the created UUID string
  */
-+ (NSString * _Nonnull)generateUUID;
++ (NSString * _Nonnull)yl_generateUUID;
 
 /**
  *  Returns if self is a valid UUID or not
  *
  *  @return Returns if self is a valid UUID or not
  */
-- (BOOL)isUUID;
+- (BOOL)yl_isUUID;
 
 /**
  *  Returns if self is a valid UUID for APNS (Apple Push Notification System) or not
  *
  *  @return Returns if self is a valid UUID for APNS (Apple Push Notification System) or not
  */
-- (BOOL)isUUIDForAPNS;
+- (BOOL)yl_isUUIDForAPNS;
 
 /**
  *  Converts self to an UUID APNS valid (No "<>" or "-" or spaces)
  *
  *  @return Converts self to an UUID APNS valid (No "<>" or "-" or spaces)
  */
-- (NSString * _Nonnull)convertToAPNSUUID;
+- (NSString * _Nonnull)yl_convertToAPNSUUID;
 
 
 /**
@@ -253,7 +253,7 @@
  *
  *  @return Returns the calculated height of string within width using given font
  */
-- (CGFloat)heightForWidth:(float)width
+- (CGFloat)yl_heightForWidth:(float)width
                   andFont:(UIFont * _Nonnull)font;
 @end
 

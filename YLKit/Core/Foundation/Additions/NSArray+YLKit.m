@@ -10,7 +10,7 @@
 
 @implementation NSArray (YLKit)
 
-- (id _Nullable)safeObjectAtIndex:(NSUInteger)index {
+- (id _Nullable)yl_safeObjectAtIndex:(NSUInteger)index {
     if ([self count] > 0 && [self count] > index) {
         return [self objectAtIndex:index];
     } else {
@@ -18,7 +18,7 @@
     }
 }
 
-- (NSArray *)reversedArray {
+- (NSArray *)yl_reversedArray {
     return [NSArray reversedArray:self];
 }
 
@@ -31,11 +31,11 @@
     return arrayTemp;
 }
 
-- (NSString * _Nonnull)arrayToJson {
-    return [NSArray arrayToJson:self];
+- (NSString * _Nonnull)yl_arrayToJson {
+    return [NSArray yl_arrayToJson:self];
 }
 
-+ (NSString * _Nonnull)arrayToJson:(NSArray * _Nonnull)array {
++ (NSString * _Nonnull)yl_arrayToJson:(NSArray * _Nonnull)array {
     NSString *json = nil;
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:array options:0 error:&error];

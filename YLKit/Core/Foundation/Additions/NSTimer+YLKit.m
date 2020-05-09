@@ -10,7 +10,7 @@
 
 @implementation NSTimer (YLKit)
 
-- (void)setPause:(BOOL)pause{
+- (void)setYl_pause:(BOOL)pause{
     if (![self.fireDate isEqualToDate:[self pauseDate]] && pause) {
         [self setFireDate:[self pauseDate]];
     }

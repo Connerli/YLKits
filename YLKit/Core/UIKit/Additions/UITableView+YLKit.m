@@ -9,7 +9,7 @@
 #import "UITableView+YLKit.h"
 
 @implementation UITableView (YLKit)
-- (void)addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace hasSectionLine:(BOOL)hasSectionLine lineColor:(nonnull UIColor *)lineColor {
+- (void)yl_addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace hasSectionLine:(BOOL)hasSectionLine lineColor:(nonnull UIColor *)lineColor {
     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
     
     CGMutablePathRef pathRef = CGPathCreateMutable();
@@ -57,8 +57,8 @@
     cell.backgroundView = testView;
 }
 
-- (void)addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(nonnull UIColor *)lineColor {
-    [self addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:leftSpace hasSectionLine:YES lineColor:lineColor];
+- (void)yl_addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(nonnull UIColor *)lineColor {
+    [self yl_addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:leftSpace hasSectionLine:YES lineColor:lineColor];
 }
 
 - (void)layer:(CALayer *)layer addLineUp:(BOOL)isUp andLong:(BOOL)isLong andColor:(CGColorRef)color andBounds:(CGRect)bounds withLeftSpace:(CGFloat)leftSpace {
@@ -82,7 +82,7 @@
     [layer addSublayer:lineLayer];
 }
 
-- (void)addShortLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(nonnull UIColor *)lineColor {
+- (void)yl_addShortLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(nonnull UIColor *)lineColor {
     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
     
     CGMutablePathRef pathRef = CGPathCreateMutable();
@@ -109,7 +109,7 @@
     cell.backgroundView = testView;
 }
 
-- (void)addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius leftRightMargin:(CGFloat)leftRightMargin topBottomMargin:(CGFloat)topBottomMargin {
+- (void)yl_addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius leftRightMargin:(CGFloat)leftRightMargin topBottomMargin:(CGFloat)topBottomMargin {
     // 设置cell的背景色为透明，如果不设置这个的话，则原来的背景色不会被覆盖
     cell.backgroundColor = UIColor.clearColor;
     // 创建一个shapeLayer

@@ -16,14 +16,14 @@
  *
  *  @return Returns the converted NSData as UTF8 NSString
  */
-+ (NSString * _Nonnull)convertToUTF8String:(NSData * _Nonnull)data;
++ (NSString * _Nonnull)yl_convertToUTF8String:(NSData * _Nonnull)data;
 
 /**
  *  Convert self to a UTF8 NSString
  *
  *  @return Returns self as UTF8 NSString
  */
-- (NSString * _Nonnull)convertToUTF8String;
+- (NSString * _Nonnull)yl_convertToUTF8String;
 
 /**
  *  Convert the given NSData to ASCII NSString
@@ -32,14 +32,14 @@
  *
  *  @return Returns the converted NSData as ASCII NSString
  */
-+ (NSString * _Nonnull)convertToASCIIString:(NSData * _Nonnull)data;
++ (NSString * _Nonnull)yl_convertToASCIIString:(NSData * _Nonnull)data;
 
 /**
  *  Convert self to a ASCII NSString
  *
  *  @return Returns self as ASCII NSString
  */
-- (NSString * _Nonnull)convertToASCIIString;
+- (NSString * _Nonnull)yl_convertToASCIIString;
 
 /**
  *  Convert self UUID to NSString.
@@ -47,7 +47,7 @@
  *
  *  @return Returns self as NSString from UUID
  */
-- (NSString * _Nullable)convertUUIDToString;
+- (NSString * _Nullable)yl_convertUUIDToString;
 
 @end
 

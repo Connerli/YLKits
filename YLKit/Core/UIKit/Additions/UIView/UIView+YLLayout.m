@@ -9,103 +9,103 @@
 #import "UIView+YLLayout.h"
 
 @implementation UIView (YLLayout)
-- (CGFloat)left {
+- (CGFloat)yl_left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x {
+- (void)setYl_left:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat)yl_top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y {
+- (void)setYl_top:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)right {
+- (CGFloat)yl_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right {
+- (void)setYl_right:(CGFloat)right {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)bottom {
+- (CGFloat)yl_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+- (void)setYl_bottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)centerX {
+- (CGFloat)yl_centerX {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX {
+- (void)setYl_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
 
-- (CGFloat)centerY {
+- (CGFloat)yl_centerY {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY {
+- (void)setYl_centerY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
 
-- (CGFloat)width {
+- (CGFloat)yl_width {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void)setYl_width:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)height {
+- (CGFloat)yl_height {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void)setYl_height:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
 
-- (CGFloat)ttScreenX {
+- (CGFloat)yl_ttScreenX {
     CGFloat x = 0.0f;
     for (UIView* view = self; view; view = view.superview) {
-        x += view.left;
+        x += view.yl_left;
     }
     return x;
 }
 
-- (CGFloat)ttScreenY {
+- (CGFloat)yl_ttScreenY {
     CGFloat y = 0.0f;
     for (UIView* view = self; view; view = view.superview) {
-        y += view.top;
+        y += view.yl_top;
     }
     return y;
 }
 
-- (CGFloat)screenViewX {
+- (CGFloat)yl_screenViewX {
     CGFloat x = 0.0f;
     for (UIView* view = self; view; view = view.superview) {
-        x += view.left;
+        x += view.yl_left;
         
         if ([view isKindOfClass:[UIScrollView class]]) {
             UIScrollView* scrollView = (UIScrollView*)view;
@@ -116,10 +116,10 @@
     return x;
 }
 
-- (CGFloat)screenViewY {
+- (CGFloat)yl_screenViewY {
     CGFloat y = 0;
     for (UIView* view = self; view; view = view.superview) {
-        y += view.top;
+        y += view.yl_top;
         
         if ([view isKindOfClass:[UIScrollView class]]) {
             UIScrollView* scrollView = (UIScrollView*)view;
@@ -129,25 +129,25 @@
     return y;
 }
 
-- (CGRect)screenFrame {
-    return CGRectMake(self.screenViewX, self.screenViewY, self.width, self.height);
+- (CGRect)yl_screenFrame {
+    return CGRectMake(self.yl_screenViewX, self.yl_screenViewY, self.yl_width, self.yl_height);
 }
 
-- (CGPoint)origin {
+- (CGPoint)yl_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
+- (void)setYl_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)yl_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void)setYl_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;

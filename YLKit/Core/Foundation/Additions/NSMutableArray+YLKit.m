@@ -10,19 +10,19 @@
 
 @implementation NSMutableArray (YLKit)
 
-- (void)addSafeObject:(id)anObject {
+- (void)yl_addSafeObject:(id)anObject {
     if (anObject) {
         [self addObject:anObject];
     }
 }
 
-- (void)insertSafeObject:(id)anObject atIndex:(NSUInteger)index {
+- (void)yl_insertSafeObject:(id)anObject atIndex:(NSUInteger)index {
     if (anObject) {
         [self insertObject:anObject atIndex:index];
     }
 }
 
-- (void)replaceSafeObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
+- (void)yl_replaceSafeObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
     if (anObject) {
         [self replaceObjectAtIndex:index withObject:anObject];
     }

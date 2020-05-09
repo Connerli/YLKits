@@ -11,7 +11,7 @@
 
 @implementation UIButton (YLKit)
 
-- (void)layoutWithStatus:(YLButtonLayout)status andMargin:(CGFloat)margin{
+- (void)yl_layoutWithStatus:(YLButtonLayout)status andMargin:(CGFloat)margin{
     CGFloat imgWidth = self.imageView.bounds.size.width;
     CGFloat imgHeight = self.imageView.bounds.size.height;
     CGFloat labWidth = self.titleLabel.bounds.size.width;
@@ -71,20 +71,20 @@
 
 + (instancetype _Nonnull)initWithFrame:(CGRect)frame title:(NSString * _Nonnull)title color:(UIColor * _Nonnull)color {
     const CGFloat *components = CGColorGetComponents(color.CGColor);
-    return [UIButton initWithFrame:frame title:title backgroundImage:[UIImage imageWithColor:color] highlightedBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:components[0]-0.1 green:components[1]-0.1 blue:components[2]-0.1 alpha:1]]];
+    return [UIButton initWithFrame:frame title:title backgroundImage:[UIImage yl_imageWithColor:color] highlightedBackgroundImage:[UIImage yl_imageWithColor:[UIColor colorWithRed:components[0]-0.1 green:components[1]-0.1 blue:components[2]-0.1 alpha:1]]];
 }
 
 + (instancetype _Nonnull)initWithFrame:(CGRect)frame title:(NSString * _Nonnull)title color:(UIColor * _Nonnull)color highlightedColor:(UIColor * _Nonnull)highlightedColor {
-    return [UIButton initWithFrame:frame title:title backgroundImage:[UIImage imageWithColor:color] highlightedBackgroundImage:[UIImage imageWithColor:highlightedColor]];
+    return [UIButton initWithFrame:frame title:title backgroundImage:[UIImage yl_imageWithColor:color] highlightedBackgroundImage:[UIImage yl_imageWithColor:highlightedColor]];
 }
 
 + (instancetype _Nonnull)initWithFrame:(CGRect)frame color:(UIColor * _Nonnull)color {
     const CGFloat *components = CGColorGetComponents(color.CGColor);
-    return [UIButton initWithFrame:frame title:nil backgroundImage:[UIImage imageWithColor:color] highlightedBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:components[0]-0.1 green:components[1]-0.1 blue:components[2]-0.1 alpha:1]]];
+    return [UIButton initWithFrame:frame title:nil backgroundImage:[UIImage yl_imageWithColor:color] highlightedBackgroundImage:[UIImage yl_imageWithColor:[UIColor colorWithRed:components[0]-0.1 green:components[1]-0.1 blue:components[2]-0.1 alpha:1]]];
 }
 
 + (instancetype _Nonnull)initWithFrame:(CGRect)frame color:(UIColor * _Nonnull)color highlightedColor:(UIColor * _Nonnull)highlightedColor {
-    return [UIButton initWithFrame:frame title:nil backgroundImage:[UIImage imageWithColor:color] highlightedBackgroundImage:[UIImage imageWithColor:highlightedColor]];
+    return [UIButton initWithFrame:frame title:nil backgroundImage:[UIImage yl_imageWithColor:color] highlightedBackgroundImage:[UIImage yl_imageWithColor:highlightedColor]];
 }
 
 + (instancetype _Nonnull)initWithFrame:(CGRect)frame image:(UIImage * _Nonnull)image {

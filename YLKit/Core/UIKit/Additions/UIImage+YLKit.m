@@ -10,7 +10,7 @@
 
 @implementation UIImage (YLKit)
 
-+ (UIImage * _Nonnull)imageWithColor:(UIColor * _Nonnull)color {
++ (UIImage * _Nonnull)yl_imageWithColor:(UIColor * _Nonnull)color {
     CGRect rect = CGRectMake(0, 0, 1, 1);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [[UIScreen mainScreen] scale]);
     CGContextRef context = UIGraphicsGetCurrentContext();

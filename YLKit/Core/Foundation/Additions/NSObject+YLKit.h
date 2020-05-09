@@ -14,21 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取类名
  */
-+ (NSString *)className;
++ (NSString *)yl_className;
 
 /**
  获取某个对象所有变量
  @param object 对象
  @return 变量数组
  */
-+ (NSArray *)getAllIvar:(id)object;
++ (NSArray *)yl_getAllIvar:(id)object;
 
 /**
  获取某个对象所有属性
  @param object 对象
  @return 属性数组
  */
-+ (NSArray *)getAllProperty:(id)object;
++ (NSArray *)yl_getAllProperty:(id)object;
 
 
 @end

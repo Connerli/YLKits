@@ -10,23 +10,23 @@
 
 @implementation NSData (YLKit)
 
-+ (NSString * _Nonnull)convertToUTF8String:(NSData * _Nonnull)data {
++ (NSString * _Nonnull)yl_convertToUTF8String:(NSData * _Nonnull)data {
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-- (NSString * _Nonnull)convertToUTF8String {
-    return [NSData convertToUTF8String:self];
+- (NSString * _Nonnull)yl_convertToUTF8String {
+    return [NSData yl_convertToUTF8String:self];
 }
 
-+ (NSString * _Nonnull)convertToASCIIString:(NSData * _Nonnull)data {
++ (NSString * _Nonnull)yl_convertToASCIIString:(NSData * _Nonnull)data {
     return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 }
 
-- (NSString * _Nonnull)convertToASCIIString {
-    return [NSData convertToASCIIString:self];
+- (NSString * _Nonnull)yl_convertToASCIIString {
+    return [NSData yl_convertToASCIIString:self];
 }
 
-- (NSString * _Nullable)convertUUIDToString {
+- (NSString * _Nullable)yl_convertUUIDToString {
     return [[[self description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 

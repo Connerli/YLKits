@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param hexString hexString
  @return 颜色
  */
-+ (UIColor *)hexString:(NSString *)hexString;
++ (UIColor *)yl_hexString:(NSString *)hexString;
 
 /**
  设置颜色
@@ -47,13 +47,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param alpha 透明度
  @return 颜色
  */
-+ (UIColor * _Nonnull)colorWithHex:(unsigned int)hex alpha:(float)alpha;
++ (UIColor * _Nonnull)yl_colorWithHex:(unsigned int)hex alpha:(float)alpha;
 
 /**
  随机色
  @return 随机颜色值
  */
-+ (UIColor *)randomColor;
++ (UIColor *)yl_randomColor;
 @end
 
 NS_ASSUME_NONNULL_END

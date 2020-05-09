@@ -12,12 +12,12 @@
 @implementation NSObject (YLKit)
 
 //类名
-+ (NSString *)className {
++ (NSString *)yl_className {
     return NSStringFromClass([self class]);
 }
 
 //获得所有变量
-+ (NSArray *)getAllIvar:(id)object {
++ (NSArray *)yl_getAllIvar:(id)object {
     NSMutableArray *array = [NSMutableArray array];
     
     unsigned int count;
@@ -42,7 +42,7 @@
 }
 
 //获得所有属性
-+ (NSArray *)getAllProperty:(id)object {
++ (NSArray *)yl_getAllProperty:(id)object {
     NSMutableArray *array = [NSMutableArray array];
     
     unsigned int count;

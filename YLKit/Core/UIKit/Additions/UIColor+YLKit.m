@@ -45,7 +45,7 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-+ (UIColor * _Nonnull )hexString:(NSString *)hexString {
++ (UIColor * _Nonnull )yl_hexString:(NSString *)hexString {
     return [UIColor hex:hexString];
 }
 
@@ -58,11 +58,11 @@
     return hexComponent / 255.0;
 }
 
-+ (id _Nonnull)colorWithHex:(unsigned int)hex alpha:(float)alpha {
++ (id _Nonnull)yl_colorWithHex:(unsigned int)hex alpha:(float)alpha {
     return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:alpha];
 }
 
-+ (UIColor *)randomColor {
++ (UIColor *)yl_randomColor {
     int r = arc4random() % 255;
     int g = arc4random() % 255;
     int b = arc4random() % 255;

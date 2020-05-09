@@ -11,7 +11,7 @@
 
 @implementation NSString (YLKit)
 
-+ (BOOL)isEmpty:(NSString *)string {
++ (BOOL)yl_isEmpty:(NSString *)string {
     if ((NSNull *)string == [NSNull null]) {
         return YES;
     }
@@ -23,7 +23,7 @@
     return NO;
 }
 
-+ (NSString * _Nonnull)searchInString:(NSString *)string charStart:(char)charStart charEnd:(char)charEnd {
++ (NSString * _Nonnull)yl_searchInString:(NSString *)string charStart:(char)charStart charEnd:(char)charEnd {
     int start = 0, end = 0;
     
     for (int i = 0; i < [string length]; i++) {
@@ -47,11 +47,11 @@
     return [[string substringFromIndex:start] substringToIndex:end];
 }
 
-- (NSString * _Nonnull)searchCharStart:(char)start charEnd:(char)end {
-    return [NSString searchInString:self charStart:start charEnd:end];
+- (NSString * _Nonnull)yl_searchCharStart:(char)start charEnd:(char)end {
+    return [NSString yl_searchInString:self charStart:start charEnd:end];
 }
 
-- (NSInteger)indexOfCharacter:(char)character {
+- (NSInteger)yl_indexOfCharacter:(char)character {
     for (NSUInteger i = 0; i < [self length]; i++) {
         if ([self characterAtIndex:i] == character) {
             return i;
@@ -61,8 +61,8 @@
     return -1;
 }
 
-- (NSString * _Nonnull)substringFromCharacter:(char)character {
-    NSInteger index = [self indexOfCharacter:character];
+- (NSString * _Nonnull)yl_substringFromCharacter:(char)character {
+    NSInteger index = [self yl_indexOfCharacter:character];
     if (index != -1) {
         return [self substringFromIndex:index];
     } else {
@@ -70,8 +70,8 @@
     }
 }
 
-- (NSString * _Nonnull)substringToCharacter:(char)character {
-    NSInteger index = [self indexOfCharacter:character];
+- (NSString * _Nonnull)yl_substringToCharacter:(char)character {
+    NSInteger index = [self yl_indexOfCharacter:character];
     if (index != -1) {
         return [self substringToIndex:index];
     } else {
@@ -79,11 +79,11 @@
     }
 }
 
-- (BOOL)hasString:(NSString * _Nonnull)substring {
-    return [self hasString:substring caseSensitive:YES];
+- (BOOL)yl_hasString:(NSString * _Nonnull)substring {
+    return [self yl_hasString:substring caseSensitive:YES];
 }
 
-- (BOOL)hasString:(NSString *)substring caseSensitive:(BOOL)caseSensitive {
+- (BOOL)yl_hasString:(NSString *)substring caseSensitive:(BOOL)caseSensitive {
     if (caseSensitive) {
         return [self rangeOfString:substring].location != NSNotFound;
     } else {
@@ -91,18 +91,18 @@
     }
 }
 
-- (BOOL)isEmail {
-    return [NSString isEmail:self];
+- (BOOL)yl_isEmail {
+    return [NSString yl_isEmail:self];
 }
 
-+ (BOOL)isEmail:(NSString * _Nonnull)email {
++ (BOOL)yl_isEmail:(NSString * _Nonnull)email {
     NSString *emailRegEx = @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
     
     NSPredicate *regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
     return [regExPredicate evaluateWithObject:[email lowercaseString]];
 }
 
-+ (NSString * _Nonnull)convertToUTF8Entities:(NSString * _Nonnull)string {
++ (NSString * _Nonnull)yl_convertToUTF8Entities:(NSString * _Nonnull)string {
     return [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[string
                                              stringByReplacingOccurrencesOfString:@"%27" withString:@"'"]
                                              stringByReplacingOccurrencesOfString:[@"%e2%80%99" capitalizedString] withString:@"’"]
@@ -140,33 +140,33 @@
                                              stringByReplacingOccurrencesOfString:@"%20" withString:@" "];
 }
 
-+ (NSString * _Nonnull)encodeToBase64:(NSString * _Nonnull)string {
-    NSData *data = [string convertToNSData];
++ (NSString * _Nonnull)yl_encodeToBase64:(NSString * _Nonnull)string {
+    NSData *data = [string yl_convertToNSData];
     return [data base64EncodedStringWithOptions:0];
 }
 
-- (NSString * _Nonnull)encodeToBase64 {
-    return [NSString encodeToBase64:self];
+- (NSString * _Nonnull)yl_encodeToBase64 {
+    return [NSString yl_encodeToBase64:self];
 }
 
-+ (NSString * _Nonnull)decodeBase64:(NSString * _Nonnull)string {
++ (NSString * _Nonnull)yl_decodeBase64:(NSString * _Nonnull)string {
     NSData *data = [[NSData alloc] initWithBase64EncodedString:string options:0];
-    return [data convertToUTF8String];
+    return [data yl_convertToUTF8String];
 }
 
-- (NSString * _Nonnull)decodeBase64 {
-    return [NSString decodeBase64:self];
+- (NSString * _Nonnull)yl_decodeBase64 {
+    return [NSString yl_decodeBase64:self];
 }
 
-+ (NSData * _Nonnull)convertToNSData:(NSString * _Nonnull)string {
++ (NSData * _Nonnull)yl_convertToNSData:(NSString * _Nonnull)string {
     return [string dataUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSData * _Nonnull)convertToNSData {
-    return [NSString convertToNSData:self];
+- (NSData * _Nonnull)yl_convertToNSData {
+    return [NSString yl_convertToNSData:self];
 }
 
-- (NSString * _Nonnull)sentenceCapitalizedString {
+- (NSString * _Nonnull)yl_sentenceCapitalizedString {
     if (![self length]) {
         return @"";
     }
@@ -176,7 +176,7 @@
     return [uppercase stringByAppendingString:lowercase];
 }
 
-- (NSString * _Nonnull)dateFromTimestamp {
+- (NSString * _Nonnull)yl_dateFromTimestamp {
     NSString *year = [self substringToIndex:4];
     NSString *month = [[self substringFromIndex:5] substringToIndex:2];
     NSString *day = [[self substringFromIndex:8] substringToIndex:2];
@@ -186,21 +186,21 @@
     return [NSString stringWithFormat:@"%@/%@/%@ %@:%@", day, month, year, hours, minutes];
 }
 
-- (NSString * _Nonnull)URLEncode {
+- (NSString * _Nonnull)yl_URLEncode {
     return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
-- (NSString * _Nonnull)removeExtraSpaces {
+- (NSString * _Nonnull)yl_removeExtraSpaces {
     NSString *squashed = [self stringByReplacingOccurrencesOfString:@"[ ]+" withString:@" " options:NSRegularExpressionSearch range:NSMakeRange(0, self.length)];
     return [squashed stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString * _Nonnull)stringByReplacingWithRegex:(NSString * _Nonnull)regexString withString:(NSString * _Nonnull)replacement {
+- (NSString * _Nonnull)yl_stringByReplacingWithRegex:(NSString * _Nonnull)regexString withString:(NSString * _Nonnull)replacement {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:nil];
     return [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:@""];
 }
 
-- (NSString * _Nonnull)HEXToString {
+- (NSString * _Nonnull)yl_HEXToString {
     NSMutableString *newString = [NSMutableString string];
     NSArray *components = [self componentsSeparatedByString:@" "];
     for (NSString * component in components) {
@@ -211,7 +211,7 @@
     return newString;
 }
 
-- (NSString * _Nonnull)stringToHEX {
+- (NSString * _Nonnull)yl_stringToHEX {
     NSUInteger len = [self length];
     unichar *chars = malloc(len * sizeof(unichar));
     [self getCharacters:chars];
@@ -226,30 +226,30 @@
     return hexString;
 }
 
-+ (NSString * _Nonnull)generateUUID {
++ (NSString * _Nonnull)yl_generateUUID {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
     return (__bridge_transfer NSString *)string;
 }
 
-- (BOOL)isUUID {
+- (BOOL)yl_isUUID {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" options:NSRegularExpressionCaseInsensitive error:nil];
     NSUInteger matches = [regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])];
     return matches == 1;
 }
 
-- (BOOL)isUUIDForAPNS {
+- (BOOL)yl_isUUIDForAPNS {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9a-f]{32}$" options:NSRegularExpressionCaseInsensitive error:nil];
     NSUInteger matches = [regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])];
     return matches == 1;
 }
 
-- (NSString * _Nonnull)convertToAPNSUUID {
+- (NSString * _Nonnull)yl_convertToAPNSUUID {
     return [[[self stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
 
-- (CGFloat)heightForWidth:(float)width andFont:(UIFont * _Nonnull)font {
+- (CGFloat)yl_heightForWidth:(float)width andFont:(UIFont * _Nonnull)font {
     CGSize size = CGSizeZero;
     if (self.length > 0) {
         CGRect frame = [self boundingRectWithSize:CGSizeMake(width, 999999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName: font } context:nil];

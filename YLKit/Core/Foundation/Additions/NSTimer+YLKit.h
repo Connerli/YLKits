@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSTimer (YLKit)
-@property (nonatomic, assign, getter=isPause) BOOL pause;
+@property (nonatomic, assign, getter=isPause) BOOL yl_pause;
 
 @end
 

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Returns the created UIImage
  */
-+ (UIImage * _Nonnull)imageWithColor:(UIColor * _Nonnull)color;
++ (UIImage * _Nonnull)yl_imageWithColor:(UIColor * _Nonnull)color;
 @end
 
 NS_ASSUME_NONNULL_END

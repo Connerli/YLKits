@@ -9,11 +9,11 @@
 #import "CALayer+YLKit.h"
 
 @implementation CALayer (YLKit)
-- (void)setBorderUIColor:(UIColor *)color {
+- (void)yl_setBorderUIColor:(UIColor *)color {
     self.borderColor = color.CGColor;
 }
 
-- (UIColor *)borderUIColor {
+- (UIColor *)yl_borderUIColor {
     return [UIColor colorWithCGColor:self.borderColor];
 }
 

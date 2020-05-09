@@ -166,7 +166,7 @@
 }
 
 + (NSString *)AES128EncryptString:(NSString *)string withKey:(NSString *)key iv:(NSString *)iv {
-    NSData *data = [string convertToNSData];
+    NSData *data = [string yl_convertToNSData];
     NSData *encryptData = [self AES128EncryptData:data withKey:key iv:iv];
     return [encryptData base64EncodedStringWithOptions:0];
 }
@@ -174,7 +174,7 @@
 + (NSString *)AES128DecryptString:(NSString *)string withKey:(NSString *)key iv:(NSString *)iv {
     NSData *data = [[NSData alloc] initWithBase64EncodedString:string options:0];
     NSData *decryptData = [self AES128DecryptData:data withKey:key iv:iv];
-    return [decryptData convertToUTF8String];
+    return [decryptData yl_convertToUTF8String];
 }
 /**
  *  AES加解密算法
@@ -219,21 +219,21 @@
 
 
 + (NSString * _Nullable)AES128EncryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key {
-    NSData *encrptData = [YLEncryption AES128EncryptData:[string convertToNSData] withKey:key];
+    NSData *encrptData = [YLEncryption AES128EncryptData:[string yl_convertToNSData] withKey:key];
     return [encrptData base64EncodedStringWithOptions:0];
 }
 
 + (NSString * _Nullable)AES128DecryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key {
     NSData *decryptData = [YLEncryption AES128DecryptData:[[NSData alloc] initWithBase64EncodedString:string options:0] withKey:key];
-    return [decryptData convertToUTF8String];
+    return [decryptData yl_convertToUTF8String];
 }
 
 + (NSData * _Nullable)AES256EncryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key {
-    return [YLEncryption AES256EncryptData:[string convertToNSData] withKey:key];
+    return [YLEncryption AES256EncryptData:[string yl_convertToNSData] withKey:key];
 }
 
 + (NSData * _Nullable)AES256DecryptString:(NSString * _Nonnull)string withKey:(NSString * _Nonnull)key {
-    return [YLEncryption AES256DecryptData:[string convertToNSData] withKey:key];
+    return [YLEncryption AES256DecryptData:[string yl_convertToNSData] withKey:key];
 }
 
 @end

@@ -41,7 +41,7 @@ static NSString *YLIsNewVerSion = @"YLIsNewVerSion";
 /// @param block 是否是新版本
 + (void)onFinishLaunchForCurrentVersion:(void(^)(BOOL isNewVersion))block {
     NSString *recordVersion = [YLUserDefaults objectForKey:YLRecordAppVersion];
-    if ([NSString isEmpty:recordVersion] || ![recordVersion isEqualToString:APP_VERSION]) {
+    if ([NSString yl_isEmpty:recordVersion] || ![recordVersion isEqualToString:APP_VERSION]) {
         [YLUserDefaults setObject:APP_VERSION forKey:YLRecordAppVersion];
         [YLUserDefaults setBool:YES forKey:YLIsNewVerSion];
     } else {

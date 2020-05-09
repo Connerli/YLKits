@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, YLButtonLayout){
  @param status 类型
  @param margin 间隙
  */
-- (void)layoutWithStatus:(YLButtonLayout)status andMargin:(CGFloat)margin;
+- (void)yl_layoutWithStatus:(YLButtonLayout)status andMargin:(CGFloat)margin;
 
 /**
  *  Create an UIButton in a frame

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param leftSpace      分割线左边离cell距离
  *  @param lineColor      线的颜色
  */
-- (void)addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(UIColor *)lineColor;
+- (void)yl_addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(UIColor *)lineColor;
 
 /**
  *  为UITableViewCell添加分割线（可选择是否添加分区线）
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param hasSectionLine section上面和下面是否有分割线
  *  @param lineColor      线的颜色
  */
-- (void)addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace hasSectionLine:(BOOL)hasSectionLine lineColor:(UIColor *)lineColor;
+- (void)yl_addLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace hasSectionLine:(BOOL)hasSectionLine lineColor:(UIColor *)lineColor;
 /**
  *  为UITableViewCell添加分割线 （不考虑分区情况，直接添加短线）
  *
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param leftSpace      分割线左边离cell距离
  *  @param lineColor      线的颜色
  */
-- (void)addShortLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(UIColor *)lineColor;
+- (void)yl_addShortLineforPlainCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath withLeftSpace:(CGFloat)leftSpace lineColor:(UIColor *)lineColor;
 
 /// 分区添加圆角
 /// @param cell 要添加的cell
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param cornerRadius 圆角
 /// @param leftRightMargin 左右间隙
 /// @param topBottomMargin 上下间隙
-- (void)addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius leftRightMargin:(CGFloat)leftRightMargin topBottomMargin:(CGFloat)topBottomMargin;
+- (void)yl_addSectionCornerRadiusWithCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath cornerRadius:(CGFloat)cornerRadius leftRightMargin:(CGFloat)leftRightMargin topBottomMargin:(CGFloat)topBottomMargin;
 @end
 
 NS_ASSUME_NONNULL_END
